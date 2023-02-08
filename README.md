@@ -25,7 +25,6 @@ em seguida [http://localhost:3000](http://localhost:3000)
 - Arquitetura de um projeto
 - Testes (Ainda em desenvolvimento)
 
-
 ## Melhorias
 
 - Layout Responsivo
