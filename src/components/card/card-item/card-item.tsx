@@ -20,7 +20,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
   return (
     <>
       {order.map(({ picture, __id, name, description, positive, negative}) => (
-        <Card id={__id}>
+        <Card key={__id}>
           <div className='flex items-end flex-row-reverse'>
             <Image className="card-item-image relative rounded-full h-[50px] border-[#b93739] border-4 border-solid lg:w-20 lg:h-20" src={picture} title={`Fotografia de ${name}`} alt={`Fotografia de ${name}`} width={50} height={50} loading='lazy'/>
             <Text as="span" color="tertiary" className="absolute rounded-full font-bold border-2 border-tertiary w-6 h-6 items-center bg-neutral-400 justify-center flex">
@@ -32,7 +32,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
               {name}
             </Text>
             <Text as="p" color="secondary" className='card-item-description font-semi'>
-              {description.replace("&ordm;", "° ")}
+              {description.replace("&ordm;", "°")}
             </Text>
           </div>
           <Tooltip porcentagemPositive={`${((positive*100) / (positive + negative)).toFixed(0)}%`} porcentagemNegative={`${((negative*100) / (positive + negative)).toFixed(0)}%`} />

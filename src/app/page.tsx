@@ -20,9 +20,9 @@ export default function Home() {
           </Text>
         </header>
         <main className='w-3/4'>
-          <div>
+          <ol>
             <CardItem fazenda={data} />
-          </div>
+          </ol>
         </main>
       </div>
     </>
