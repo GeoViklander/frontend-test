@@ -31,3 +31,12 @@ body {
 .tooltip:hover .card-item-description {
   @apply text-neutral-500;
 }
+
+.tooltip:hover .card-item-image {
+  @apply border-white;
+}
+
+.card-item-image + .card-item-count {
+  position: absolute;
+} 
+

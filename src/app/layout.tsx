@@ -1,4 +1,11 @@
 import './globals.css'
+import { Montserrat } from "@next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -6,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <head />
-      <body>{children}</body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   )
 }
