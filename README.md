@@ -25,9 +25,14 @@ em seguida [http://localhost:3000](http://localhost:3000)
 - Arquitetura de um projeto
 - Testes (Ainda em desenvolvimento)
 
-## Melhorias
+## Melhorias em Desenvolvimento
 
 - Layout Responsivo
+
+## Melhorias no Projeto
+
+- Modificação no layout responsivo, no intuito de deixar o layout do mobile proporcional
+
 
 ## Referência
 
