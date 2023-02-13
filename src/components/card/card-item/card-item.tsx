@@ -32,7 +32,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
               {name}
             </Text>
             <Text as="p" color="secondary" className='card-item-description font-semi'>
-              {description.replace("&ordm;", "°")}
+              {description.replace("&ordm;", "° ")}
             </Text>
           </div>
           <Tooltip porcentagemPositive={`${((positive*100) / (positive + negative)).toFixed(0)}%`} porcentagemNegative={`${((negative*100) / (positive + negative)).toFixed(0)}%`} />
