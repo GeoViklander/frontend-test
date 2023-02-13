@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         primary: '#b93739', // vermelho das letras
         secundary: '#b1b1b1', // cinza das descrições,
-        tertiary: '#f2f0f1', //cinza da ordenação
+        tertiary: '#8f8f8f', //cinza da ordenação
         neutral: {
           400: '#FFFFFF', // fontes brancas
           500: '#121925', // fonte preta

@@ -3,7 +3,7 @@ import React from 'react'
 type TextProps<C extends React.ElementType> = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
   children: React.ReactNode
-  color?: 'primary' | 'secondary'
+  color?: 'primary' | 'secondary' | 'tertiary' 
   className?: string
 } & React.ComponentPropsWithoutRef<C>
 
@@ -17,6 +17,7 @@ export const Text = <C extends React.ElementType = 'p'>({
   const colors = {
     primary: 'text-primary',
     secondary: 'text-secundary',
+    tertiary: 'text-tertiary'
   }
   const DynamicText = as || 'p'
 

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tooltip .tooltiptext {
+  @apply invisible text-center right-[5%] absolute z-[1] lg:right-28;
+}
+
+.tooltip:hover .tooltiptext {
+  @apply visible;
+}
+
+.tooltiptext:before {
+  content: ""; 
+  position: absolute;
+  left: -7px; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+  border-right: 7px solid rgb(255, 255, 255); 
+  top: 24px;
+}
+
+
+
+.tooltip:hover .card-item-name {
+  @apply text-neutral-400;
+}
+
+.tooltip:hover .card-item-description {
+  @apply text-neutral-500;
+}
