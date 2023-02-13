@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-[#272727]
+}
+
 .tooltip .tooltiptext {
-  @apply invisible text-center right-[5%] absolute z-[1] lg:right-28;
+  @apply invisible text-center right-[5%] absolute z-[1] lg:right-16;
 }
 
 .tooltip:hover .tooltiptext {
@@ -19,8 +23,6 @@
   border-right: 7px solid rgb(255, 255, 255); 
   top: 24px;
 }
-
-
 
 .tooltip:hover .card-item-name {
   @apply text-neutral-400;

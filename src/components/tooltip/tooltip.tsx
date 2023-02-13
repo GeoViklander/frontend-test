@@ -1,6 +1,11 @@
 import { Text } from '@components/components/text' 
 
-  export function Tooltip() {
+type TooltipProps = {
+  porcentagemPositive: string
+  porcentagemNegative: string
+}
+
+  export function Tooltip({ porcentagemPositive, porcentagemNegative }: TooltipProps) {
     return (
       <div className="tooltiptext">
         <div className=' bg-white flex md:divide-x flex-col rounded-md md:flex-row'>
@@ -9,7 +14,7 @@ import { Text } from '@components/components/text'
               Gostam
             </Text>
             <Text as="p" color="tertiary" className='md:text-xl font-bold'>
-              37%
+              {porcentagemPositive}
             </Text>
           </div>
           <div>
@@ -17,7 +22,7 @@ import { Text } from '@components/components/text'
               Não Gostam
             </Text>
             <Text as="p" color="tertiary" className='md:text-xl font-bold'>
-              37%
+              {porcentagemNegative}
             </Text>
           </div>
         </div>
