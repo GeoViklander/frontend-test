@@ -8,23 +8,24 @@ export type ItemFazendaProps = {
   name: string,
   description: string,
   picture: string,
-  positive: number ,
-  negative: number ,
+  positive: number,
+  negative: number,
 } 
 
 export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
-  const order = [...fazenda].sort((a, b) => b.negative - a.positive);
   var count = 1;  
 
   return (
     <>
-      {order.map(fazenda => {
+      {[...fazenda]
+        .sort((a, b) => b.negative - a.positive)
+        .map(fazenda => {
         var numbersPositive = fazenda.positive;
         var numbersNegative = fazenda.negative;
         var total = numbersPositive + numbersNegative; 
         var percentagePositive = ((numbersPositive*100) / total).toFixed(0);
         var percentageNegative = ((numbersNegative*100) / total).toFixed(0);
-
+          
         return (
           <Card key={fazenda.__id}>
              <div className='flex items-end flex-row-reverse'>
