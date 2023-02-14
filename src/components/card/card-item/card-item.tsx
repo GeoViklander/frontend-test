@@ -8,8 +8,8 @@ export type ItemFazendaProps = {
   name: string,
   description: string,
   picture: string,
-  positive: number,
-  negative: number,
+  positive?: number | null,
+  negative?: number | null,
 } 
 
 export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
@@ -18,10 +18,10 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
   return (
     <>
       {[...fazenda]
-        .sort((a, b) => b.negative - a.positive)
+        .sort((a, b) => b.negative - a.positive )
         .map(fazenda => {
-        var numbersPositive = fazenda.positive;
-        var numbersNegative = fazenda.negative;
+        var numbersPositive = fazenda.positive || 0 ;
+        var numbersNegative = fazenda.negative || 0;
         var total = numbersPositive + numbersNegative; 
         var percentagePositive = ((numbersPositive*100) / total).toFixed(0);
         var percentageNegative = ((numbersNegative*100) / total).toFixed(0);
