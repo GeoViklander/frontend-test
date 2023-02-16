@@ -1,7 +1,7 @@
-import { Card } from '@components/components/card'
-import { Text } from '@components/components/text'
+import { Card } from '@components/card'
+import { Text } from '@components/text'
 import Image from 'next/image'
-import { Tooltip } from '@components/components/tooltip'
+import { Tooltip } from '@components/tooltip'
 
 export type ItemFazendaProps = {
   __id: string,

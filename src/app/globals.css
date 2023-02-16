@@ -37,6 +37,6 @@ body {
 }
 
 .card-item-image + .card-item-count {
-  position: absolute;
+  @apply absolute;
 } 
 

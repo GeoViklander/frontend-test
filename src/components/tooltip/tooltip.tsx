@@ -1,4 +1,4 @@
-import { Text } from '@components/components/text' 
+import { Text } from '@components/text' 
 
 type TooltipProps = {
   porcentagemPositive: string

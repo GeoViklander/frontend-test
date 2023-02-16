@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import './globals.css';
-import { CardItem } from '@components/components/card/card-item';
-import { fazenda } from '../constants/constants'
+import { CardItem } from '@components/card/card-item';
+import { fazenda } from '@constants/constants'
 import Logo from "/public/fazenda-logo.png"
-import { Text } from '@components/components/text'
+import { Text } from '@components/text'
 
 
 
