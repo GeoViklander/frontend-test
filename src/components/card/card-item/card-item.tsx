@@ -30,7 +30,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
   });
 
 
-    const result = order.map(function(item, index){
+    const newOrder = order.map(function(item, index){
     const numbersPositive = item.positive || 0 ;
     const numbersNegative = item.negative || 0;
     const total = numbersPositive + numbersNegative; 
@@ -58,7 +58,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
 
   return (
     <>
-      {result}
+      {newOrder}
     </>
 
   )
