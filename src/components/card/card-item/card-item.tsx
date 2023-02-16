@@ -14,7 +14,7 @@ export type ItemFazendaProps = {
 
 export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
   
-  function test (votos, total) {
+  function converter (votos, total) {
     var calc = isNaN(votos) ? 0 : votos && ((votos*100) / total).toFixed(0);
     
     return calc
@@ -52,7 +52,7 @@ export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
             {item.description.replace("&ordm;", "°")}
           </Text>
         </div>
-        <Tooltip porcentagemPositive={`${test(numbersPositive, total)}%`} porcentagemNegative={`${test(numbersNegative, total)}%`} />
+        <Tooltip porcentagemPositive={`${converter(numbersPositive, total)}%`} porcentagemNegative={`${converter(numbersNegative, total)}%`} />
       </Card>
     );
   });
