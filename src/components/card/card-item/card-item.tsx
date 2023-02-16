@@ -15,7 +15,8 @@ export type ItemFazendaProps = {
 export function CardItem({ fazenda }: { fazenda: ItemFazendaProps[] }) {
   
   function test (votos, total) {
-    var calc = ((votos*100) / total).toFixed(0);
+    var calc = isNaN(votos) ? 0 : votos && ((votos*100) / total).toFixed(0);
+    
     return calc
   }
 
